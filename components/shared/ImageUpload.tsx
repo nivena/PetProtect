@@ -42,7 +42,7 @@ export default function ImageUpload({
 
         // ✅ Replace temporary preview with the final uploaded image
         setPreviewImage(cleanFilename);
-        onImageUpload(cleanFilename); // ✅ Send correct filename to `AddProperty.tsx`
+        onImageUpload(cleanFilename); // ✅ Notify parent with final image path
       } else {
         console.error("❌ Image upload failed:", data.error);
       }
