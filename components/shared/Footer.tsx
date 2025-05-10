@@ -1,4 +1,3 @@
-// components/shared/Footer.tsx
 import Image from "next/image";
 
 export default function Footer({ className = "" }: { className?: string }) {
@@ -15,22 +14,25 @@ export default function Footer({ className = "" }: { className?: string }) {
             Contact:{" "}
             <a
               href="mailto:support@petprotect.com"
-              className="text-skyblue underline"
+              className="text-[#e0c370] underline"
             >
               support@petprotect.com
             </a>
           </p>
         </div>
 
-        {/* RIGHT: Logo (snug + top aligned) */}
+        {/* RIGHT: Logo */}
         <div className="flex items-start justify-end">
-          <img
+          <Image
             src="/backgrounds/Polygonsleek.png"
             alt="Powered by Polygon"
-            className="h-12 w-auto object-contain"
+            width={120}
+            height={40}
+            className="object-contain h-12 w-auto"
           />
         </div>
       </div>
     </footer>
   );
 }
+
