@@ -1,7 +1,7 @@
 import React from "react";
 import { format } from "date-fns";
 
-type Policy = {
+type CoveragePolicy = {
   id: number; // ✅ Added ID for better React key
   petName: string;
   insuredAmount: string;
@@ -11,7 +11,7 @@ type Policy = {
   claimCount: number;
 };
 
-export default function MyCoverage({ policies }: { policies: Policy[] }) {
+export default function MyCoverage({ policies }: { policies: CoveragePolicy[] }) {
   if (!policies || policies.length === 0) {
     return (
       <p className="text-gray-500">
