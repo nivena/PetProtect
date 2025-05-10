@@ -12,25 +12,26 @@ export default function WalletConnector({
   const [account, localSetAccount] = useState<string | null>(null);
 
   useEffect(() => {
-    console.log("📡 WalletConnector loaded");
-
-    // ✅ Load wallet from localStorage if it exists
     const savedWallet = localStorage.getItem("walletAddress");
     if (savedWallet) {
       localSetAccount(savedWallet);
       setAccount(savedWallet);
-      console.log("✅ Loaded wallet from localStorage:", savedWallet);
     }
 
-    (window as any).connectWallet = connectWallet;
+    // Optional: attach for debugging
+    if (process.env.NODE_ENV !== "production") {
+      (window as any).connectWallet = connectWallet;
+    }
   }, []);
 
   async function handleConnectWallet() {
-    console.log("🔄 Connect Wallet Clicked!");
+    if (!(window as any).ethereum) {
+      alert("MetaMask not detected. Please install a wallet.");
+      return;
+    }
+
     try {
       const { signer, account } = await connectWallet();
-      console.log("✅ Wallet connected:", account);
-
       if (!signer) {
         alert("Failed to connect wallet. Please check MetaMask.");
         return;
@@ -38,7 +39,7 @@ export default function WalletConnector({
 
       setAccount(account);
       localSetAccount(account);
-      localStorage.setItem("walletAddress", account); // ✅ Save to localStorage
+      localStorage.setItem("walletAddress", account);
     } catch (error) {
       console.error("❌ Wallet connection error:", error);
       alert("Something went wrong.");
