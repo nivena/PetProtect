@@ -1,23 +1,15 @@
 import { useState } from "react";
 import { ethers } from "ethers";
 import ImageUpload from "@/components/shared/ImageUpload";
-import { useUserPolicies } from "@/hooks/useUserPolicies";
 import PrimaryButton from "@/components/shared/PrimaryButton";
 
-export default function CreatePolicy({
-  ownershipContract,
-  account,
-}: {
-  ownershipContract: ethers.Contract | null;
-  account: string | null;
-}) {
+export default function CreatePolicy() {
+
   const [policyName, setPolicyName] = useState("");
   const [valuation, setValuation] = useState("");
   const [coverageUnits, setCoverageUnits] = useState("");
   const [imageFilename, setImageFilename] = useState<string | null>(null);
   const handleImageUpload = (filename: string) => setImageFilename(filename);
-
-  const { refreshPolicies } = useUserPolicies(ownershipContract, account);
 
   async function handleCreatePolicy(event: React.FormEvent) {
     event.preventDefault();

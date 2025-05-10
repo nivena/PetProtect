@@ -1,55 +1,19 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { connectWallet } from "@/utils/connectWallet";
-import { getPetPolicyContract } from "@/utils/loadContract";
-import { ethers } from "ethers";
 import Layout from "@/components/shared/Layout";
 import HeroSection from "@/components/shared/HeroSection";
 import CategoryNav from "@/components/shared/CategoryNav";
 import CallToAction from "@/components/shared/CallToAction";
 
 export default function Home() {
-  const [account, setAccount] = useState<string | null>(null);
-  const [policyContract, setPolicyContract] = useState<ethers.Contract | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function loadContracts() {
-      const wallet = await connectWallet();
-      if (!wallet.signer || !wallet.account) return;
-
-      setAccount(wallet.account);
-
-      const contract = await getPetPolicyContract(wallet.signer);
-      setPolicyContract(contract);
-
-      setLoading(false);
-    }
-
-    loadContracts();
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="container mx-auto p-6 text-center">
-        <h1 className="text-2xl font-bold animate-pulse text-gray-400">
-          Loading...
-        </h1>
-      </div>
-    );
-  }
-
   return (
     <Layout>
-     <div
-  className="relative min-h-screen flex flex-col bg-cover bg-top bg-no-repeat mt-[72px]"
-  style={{ backgroundImage: "url('/backgrounds/BackgroundInsurance.jpg')" }}
->
-
-  <div className="absolute inset-0 bg-black/40 z-0" />
-  <div className="relative z-10 pt-20 container mx-auto p-6">
-        
+      <div
+        className="relative min-h-screen flex flex-col bg-cover bg-top bg-no-repeat mt-[72px]"
+        style={{ backgroundImage: "url('/backgrounds/BackgroundInsurance.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-black/40 z-0" />
+        <div className="relative z-10 pt-20 container mx-auto p-6">
           <HeroSection />
 
           {/* 🔄 Categories + Search */}
@@ -70,4 +34,5 @@ export default function Home() {
     </Layout>
   );
 }
+
 
