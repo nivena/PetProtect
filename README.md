@@ -1,39 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🐾 PetProtect — Decentralized Pet Insurance (White-Label MVP)
 
-## Getting Started
+A lean, whitelabel micro-insurance dApp for dogs and cats.  
+Buy blockchain-based policies. No paperwork. No middlemen.  
+Built on Polygon. Pay in MATIC.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- 🐕 Buy pet insurance with just a wallet — no KYC  
+- 💸 MATIC-based payments with live price support  
+- 📂 View purchased policies in your "My Coverage" dashboard  
+- 🖼️ Upload custom images for each policy  
+- 🧩 Modular code — easily extend with claims or governance  
+- 💼 White-label friendly: customize brand, text, images  
+- ⚙️ Deployed on Polygon Amoy testnet (ETH L2)  
+
+---
+
+## 🧱 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+components/
+├── policies/                 # Insurance-related UI (buy, view, coverage grid)
+└── shared/                   # Navbar, footer, layout, CTA, wallet button, etc.
+
+pages/
+├── index.tsx                 # Homepage (hero + category nav)
+├── dashboard.tsx             # User dashboard (policy overview)
+├── coverage-exchange.tsx     # Marketplace-style policy plans
+├── create-policy.tsx         # Admin or test plan creation
+├── my-coverage.tsx           # Purchased policy viewer
+├── about.tsx, whats-covered.tsx, why-its-so-affordable.tsx
+
+hooks/
+├── useCoverageExchange.ts    # Load static or future dynamic plans
+├── useMyPolicies.ts          # Fetch user's purchased policies
+└── useUserPolicies.ts        # Load all user-created policies (if needed)
+
+utils/
+├── connectWallet.ts
+├── loadContract.ts
+├── purchasePolicy.ts
+└── misc helpers: formatPrice, fetchMaticPrice, etc.
 ```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1️⃣ Clone the Repo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone https://github.com/YOUR_USERNAME/fractionalhq-pet.git
+cd fractionalhq-pet
+```
+### 2️⃣ Install Dependencies
+```
+npm install
+```
+### 3️⃣ Set Environment Variables
+Create a .env.local file:
+```
+NEXT_PUBLIC_POLICY_CONTRACT=0xYourContractAddress
+NEXT_PUBLIC_CHAIN_ID=80002
+NEXT_PUBLIC_RPC_URL=https://polygon-amoy.infura.io/v3/YOUR_INFURA_ID
+NEXT_PUBLIC_PINATA_JWT=Bearer YOUR_PINATA_JWT
+```
+Uses Polygon Amoy Testnet (chain ID 80002).
+You can use Pinata or Web3.Storage for IPFS uploads.
 
-## Learn More
+### 4️⃣ Run Locally
+```
+npm run dev
+```
+Visit: http://localhost:3000
 
-To learn more about Next.js, take a look at the following resources:
+### 🔐 Smart Contract Info
+Contract: PetPolicy.sol
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Network: Polygon Amoy Testnet
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Use scripts/deployPetPolicy.cjs to deploy
 
-## Deploy on Vercel
+Store contract address in .env.local under NEXT_PUBLIC_POLICY_CONTRACT
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 💼 Licensing & Usage
+This repo is a white-label starter kit.
+It’s free to use for demo or educational purposes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For production use, premium modules, or support:
 
-<pre> ## 🧱 Project Structure ```bash components/ ├── policies/ # Insurance-related UI (buy, view, coverage grid) └── shared/ # Navbar, footer, layout, CTA, wallet button, etc. pages/ ├── index.tsx # Homepage (hero + category nav) ├── dashboard.tsx # User dashboard (policy overview) ├── coverage-exchange.tsx # Marketplace-style policy plans ├── create-policy.tsx # Admin or test plan creation ├── my-coverage.tsx # Purchased policy viewer ├── about.tsx, whats-covered.tsx, why-its-so-affordable.tsx hooks/ ├── useCoverageExchange.ts # Load static or future dynamic plans ├── useMyPolicies.ts # Fetch user's purchased policies └── useUserPolicies.ts # Load all user-created policies (if needed) utils/ ├── connectWallet.ts ├── loadContract.ts ├── purchasePolicy.ts └── misc helpers: formatPrice, fetchMaticPrice, etc. ``` </pre>
+📩 info@fractionalhq.com
+🌐 https://fractionalhq.com
 
+### 💡 Want More?
+Upgrade to a paid plan and unlock:
+
+✅ submitClaim() flow — users file claims on-chain
+
+🧠 DAO voting on claims (token-based governance)
+
+🧮 Shared claim pool from revenue
+
+📦 Expansion packs: TravelProtect, ElectronicsProtect, HomeProtect
+
+### 🧪 MVP Walkthrough (Demo Script)
+Visit homepage → click “Dog” or “Cat”
+
+View available policies
+
+Buy coverage using MATIC
+
+Go to Dashboard → see My Coverage
+
+(Optional) Enable Claims or Governance if licensed
+
+### 🧠 Built with ❤️ by FractionalHQ
+No offices. No call centers. Just decentralized insurance.
