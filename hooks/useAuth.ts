@@ -37,7 +37,7 @@ export function useAuth() {
             }
 
             const address = addresses[0];
-            const message = "Sign this message to verify your identity in Property Decentralized.";
+            const message = "Sign this message to verify your identity for PetProtect insurance.";
             const signature = await client.signMessage({ account: address, message });
 
             console.log("✅ Wallet signed in:", address);

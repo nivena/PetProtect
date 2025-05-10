@@ -32,6 +32,7 @@ export function useCoverageExchange() {
       const contract = await getPetPolicyContract(wallet.signer);
       setPolicyContract(contract);
 
+      // ✅ Using static demo plans for whitelabel MVP. Replace with contract fetch in full version.
       setPlans([
         {
           id: 0,
