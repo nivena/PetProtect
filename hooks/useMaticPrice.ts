@@ -1,4 +1,3 @@
-// hooks/useMaticPrice.ts
 import { useEffect, useState } from "react";
 import { fetchMaticPrice } from "@/utils/fetchMaticPrice";
 
@@ -6,11 +5,17 @@ export function useMaticPrice() {
   const [price, setPrice] = useState<number>(1);
 
   useEffect(() => {
-    console.log("💵 Matic Price Loaded:", price);
-
     async function load() {
-      const fetched = await fetchMaticPrice();
-      setPrice(fetched);
+      try {
+        const fetched = await fetchMaticPrice();
+        setPrice(fetched);
+
+        if (process.env.NODE_ENV !== "production") {
+          console.log("💵 Matic Price Loaded:", fetched);
+        }
+      } catch (error) {
+        console.error("❌ Failed to fetch MATIC price:", error);
+      }
     }
 
     load();
@@ -18,3 +23,4 @@ export function useMaticPrice() {
 
   return price;
 }
+
