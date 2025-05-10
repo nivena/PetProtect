@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FaDog, FaCat, FaPlane, FaHome, FaMobileAlt, FaCar } from "react-icons/fa";
+import { FaDog, FaCat } from "react-icons/fa";
 
 const categories = [
   { name: "Dog", icon: FaDog, link: "/coverage-exchange" },
