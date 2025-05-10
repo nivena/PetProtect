@@ -8,7 +8,7 @@ export default function AboutPage() {
       <div className="min-h-screen pt-24 bg-gradient-to-br from-[#f9fafb] to-[#eef2f7] text-gray-800">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-6 text-center">
-            About FractionalHQ Insurance
+            About Pet Protect Insurance
           </h1>
 
           <blockquote className="italic text-center text-blue-600 text-xl mb-6">
@@ -16,7 +16,7 @@ export default function AboutPage() {
           </blockquote>
 
           <p className="text-lg mb-4 leading-relaxed text-center">
-            <strong>FractionalHQ Insurance</strong> is reshaping how we protect the things we love—
+            <strong>Pet Protect Insurance</strong> is reshaping how we protect the things we love—
             starting with our pets. We believe insurance should be transparent, accessible, and fair.
             Using blockchain technology, we enable people to co-fund risk pools and vote on claims
             without relying on legacy insurers.
@@ -36,7 +36,7 @@ export default function AboutPage() {
             <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-[#e0c370] shadow-lg animate-fadeIn">
               <Image
                 src="/fsre-logo.png"
-                alt="FractionalHQ Logo"
+                alt="Pet Protect Logo"
                 width={112}
                 height={112}
                 className="object-cover"
@@ -56,7 +56,7 @@ export default function AboutPage() {
           <div className="mt-10 text-center">
             <h2 className="text-2xl font-semibold mb-4">Founding Ethos</h2>
             <p className="text-md text-gray-600 max-w-2xl mx-auto">
-              FractionalHQ was born out of frustration with outdated systems. Built between Kuala
+              Pet Protect was born out of frustration with outdated systems. Built between Kuala
               Lumpur and Singapore, it reflects a new mindset: mutual trust, blockchain
               transparency, and user-governed decisions. Our team believes insurance should be a
               public utility—not a profit-first industry.
@@ -67,8 +67,8 @@ export default function AboutPage() {
 
           <div className="mt-10 text-center text-sm text-blue-600">
             Contact us:{" "}
-            <a href="mailto:info@fractionalhq.com" className="underline">
-              info@fractionalhq.com
+            <a href="mailto:support@petprotect.com" className="underline">
+              support@petprotect.com
             </a>
           </div>
         </div>

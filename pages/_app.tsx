@@ -8,7 +8,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 96x96" />
-        <title>FractionalHQ Insurance – Decentralized Coverage Pools</title>
+        <title> Pet Protect Insurance – Decentralized Coverage Pools</title>
       </Head>
       <Navigation />
       <Component {...pageProps} />

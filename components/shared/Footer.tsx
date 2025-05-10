@@ -9,15 +9,15 @@ export default function Footer({ className = "" }: { className?: string }) {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-4">
         {/* LEFT: Text */}
         <div className="space-y-1 text-left">
-          <p>© {new Date().getFullYear()} FractionalHQ. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Pet Protect. All rights reserved.</p>
           <p>Built with ❤️ in Kuala Lumpur & Singapore</p>
           <p>
             Contact:{" "}
             <a
-              href="mailto:info@fractionalhq.com"
+              href="mailto:support@petprotect.com"
               className="text-skyblue underline"
             >
-              info@fractionalhq.com
+              support@petprotect.com
             </a>
           </p>
         </div>

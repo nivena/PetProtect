@@ -1,24 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
-/*import {
-  getOwnershipContract,
-  getGovernanceContract,
-} from "@/utils/loadContract";*/
+
 import { connectWallet } from "@/utils/connectWallet";
 import { ethers } from "ethers";
 import Image from "next/image";
 import axios from "axios";
-//import Proposals from "@/components/proposals/Proposals";
-//import Portfolio from "@/components/policies/Portfolio";
-//import Listings from "@/components/policies/Listings";
+
 import Sidebar from "@/components/shared/Sidebar";
-import AddProperty from "@/components/policies/CreatePolicy"; // ✅ Correct import
-//import ProposalSummary from "@/components/proposals/ProposalSummary";
-//import ProposalGrid from "@/components/proposals/ProposalGrid";
-//import { usePortfolioValuation } from "@/hooks/usePortfolioValuation";
-/*import { useUserShares } from "@/hooks/useUserShares";*/
-/*import { useGovernanceProposals } from "@/hooks/useGovernanceProposals";*/
+import AddProperty from "@/components/policies/CreatePolicy"; 
+
 import { useUserPolicies } from "@/hooks/useUserPolicies";
 import { useMaticPrice } from "@/hooks/useMaticPrice";
 import { FaChartBar } from "react-icons/fa";
@@ -26,7 +17,6 @@ import { fetchUserShares } from "@/utils/fetchUserShares";
 import PrimaryButton from "@/components/shared/PrimaryButton";
 import Layout from "@/components/shared/Layout";
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa";
-import Loader from "@/components/shared/Loader";
 import { useMyPolicies } from "@/hooks/useMyPolicies";
 import MiniPolicyGrid from "@/components/policies/MiniPolicyGrid";
 
@@ -38,13 +28,11 @@ export default function Dashboard() {
     useState<ethers.Contract | null>(null);
     const [userPolicies, setUserPolicies] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
-  /*const userShares = useUserShares(ownershipContract, account);*/
   const [showAddPolicy, setShowAddPolicy] = useState(false);
   const maticPrice = useMaticPrice();
   const [isLoading, setIsLoading] = useState(false);
   const { policies, loading: loadingPolicies } = useMyPolicies();
 
-  //const portfolioValue = usePortfolioValuation(ownershipContract, account);
   useEffect(() => {
 
     async function loadWallet() {
@@ -52,8 +40,7 @@ export default function Dashboard() {
       setAccount(walletResponse.account);
 
       if (!walletResponse.signer) return;
-      /*const contract = await getOwnershipContract(walletResponse.signer);*/
-      /*setOwnershipContract(contract);*/
+    
     }
 
     loadWallet();
@@ -64,15 +51,7 @@ export default function Dashboard() {
   >({});
   console.log("🔄 Fetching user shares after transaction...");
 
-  /*const {
-    proposals,
-    relevantProposals,
-
-    voteOnProposal,
-    refreshProposals,
-  } = useGovernanceProposals();*/
-
-  /*console.log("📊 DEBUG: Dashboard receiving userShares:", userShares);*/
+  
 
   async function sellShares(propertyId: number, shares: number, price: number) {
     if (!ownershipContract) {
@@ -93,7 +72,6 @@ export default function Dashboard() {
 
       const formattedPrice = ethers.parseUnits(price.toString(), "ether");
 
-      // ✅ Try gas estimation first
       let gasEstimate;
       try {
         gasEstimate = await ownershipContract.listSharesForSale.estimateGas(
@@ -131,27 +109,17 @@ export default function Dashboard() {
     }
   }
 
-  /*console.log(
-    "👁 Rendering Portfolio with shares:",
-    userShares.map((s) => ({
-      id: s.id,
-      name: s.propertyName,
-      listed: s.listed,
-    }))
-  );*/
+
 
   return (
     <Layout footerClassName="ml-64">
       <div className="flex">
-        {/* Sidebar stays fixed on the left */}
         <Sidebar />
 
-        {/* Main Content (full width minus sidebar) */}
         <main className="flex-1 ml-64 p-6 pt-20 bg-gradient-to-br from-[#f9fafb] to-[#eef2f7] min-h-screen">
-          {/* 🔥 Show loader if waiting for a blockchain tx */}
           {isLoading && (
             <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-              <Loader />
+          
             </div>
           )}
          <h1 className="text-3xl font-bold text-center flex items-center justify-center gap-3 text-[#272d32]">
@@ -159,7 +127,7 @@ export default function Dashboard() {
   Dashboard
   <img
     src="/fsre-logo.png"
-    alt="FractionalHQ Logo"
+    alt="Pet Protect Logo"
     className="h-8 w-8 rounded-full object-contain border border-gray-300 shadow-sm"
   />
 </h1>
@@ -183,40 +151,14 @@ export default function Dashboard() {
 
 </div>
 
-{/*}
-          <Portfolio
-            userShares={userShares.map((share) => ({
-              id: share.id,
-              shares: share.shares,
-              listed: share.listed,
-              propertyName: share.propertyName || `Policy #${share.id}`,
-              image: share.image,
-            }))}
-            portfolioValue={portfolioValue}
-            ownershipContract={ownershipContract}
-            maticPrice={maticPrice}
-            maxToShow={4}
-            showSeeAll={true}
-          />
-*/}
+
           {false && (
             <div className="mt-8">
-            {/*}  <Listings
-                userShares={userShares.map((share) => ({
-                  ...share,
-                  propertyName: share.propertyName || `Property #${share.id}`,
-                }))}
-                userSharesToSell={userSharesToSell}
-                setUserSharesToSell={setUserSharesToSell}
-                sellShares={sellShares}
-                maticPrice={maticPrice}
-              />*/}
+           
             </div>
           )}
 
-{/*
-<ProposalSummary proposals={relevantProposals} />
-*/}
+
 
           <div id="add-property" className="mt-8">
           <PrimaryButton

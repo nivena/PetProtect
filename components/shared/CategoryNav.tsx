@@ -5,10 +5,7 @@ import { FaDog, FaCat, FaPlane, FaHome, FaMobileAlt, FaCar } from "react-icons/f
 const categories = [
   { name: "Dog", icon: FaDog, link: "/coverage-exchange" },
   { name: "Cat", icon: FaCat, link: "/coverage-exchange" },
-  { name: "Travel", icon: FaPlane, link: "#coming-soon" },
-  { name: "Home", icon: FaHome, link: "#coming-soon" },
-  { name: "Electronics", icon: FaMobileAlt, link: "#coming-soon" },
-  { name: "Auto", icon: FaCar, link: "#coming-soon" },
+  
 ];
 
 export default function CategoryNav() {

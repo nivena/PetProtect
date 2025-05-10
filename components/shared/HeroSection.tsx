@@ -13,7 +13,7 @@ export default function HeroSection() {
         Pet insurance built for trustless payouts.
       </p>
       <p className="text-sm text-[#e0c370] max-w-2xl mx-auto">
-        Built by <strong>FractionalHQ</strong>. Powered by smart contracts.
+        Built by <strong>Pet Protect</strong>. Powered by smart contracts.
       </p>
     </div>
   );

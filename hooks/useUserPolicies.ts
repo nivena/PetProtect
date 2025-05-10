@@ -1,5 +1,4 @@
-// 🚧 Temporary stub — using property-style logic.
-// 🐾 Replace with `getMyPolicies()` from PetPolicy.sol for insurance MVP.
+
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 

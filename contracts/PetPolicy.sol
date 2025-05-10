@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-/// @title FractionalHQ Pet Insurance Policy Contract
+/// @title Pet Protect Insurance Policy Contract
 /// @notice Allows users to purchase simple pet insurance policies and submit claims
 
 contract PetPolicy {

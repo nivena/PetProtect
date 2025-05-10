@@ -7,7 +7,7 @@ export default function WhatsCoveredPage() {
       <div className="max-w-3xl mx-auto pt-24 p-6 text-[#272d32]">
         <h1 className="text-3xl font-bold mb-4">🩺 What’s Covered</h1>
         <p className="mb-4">
-          FractionalHQ Insurance currently offers microinsurance for dogs and cats. Our goal is to make preventative and emergency care more accessible, starting with coverage for everyday accidents.
+          Pet Protect Insurance currently offers microinsurance for dogs and cats. Our goal is to make preventative and emergency care more accessible, starting with coverage for everyday accidents.
         </p>
 
         <h2 className="text-xl font-semibold mt-6 mb-2">✅ Covered Events</h2>

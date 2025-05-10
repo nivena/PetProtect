@@ -36,7 +36,7 @@ export default function Navigation() {
           className="rounded-full"
         />
         <h1 className="text-2xl font-bold text-[#e0c370] tracking-wide">
-          FractionalHQ
+          Pet Protect
         </h1>
       </a>
 

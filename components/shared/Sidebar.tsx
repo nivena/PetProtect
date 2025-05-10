@@ -50,7 +50,7 @@ export default function Sidebar() {
         <div className="w-25 h-25 rounded-full overflow-hidden border-2 border-gold shadow-lg">
           <Image
             src="/fsre-logo.png"
-            alt="FractionalHQ Logo"
+            alt="Pet Protect Logo"
             width={200}
             height={200}
             className="object-cover"

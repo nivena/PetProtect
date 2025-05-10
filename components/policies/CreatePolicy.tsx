@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { ethers } from "ethers";
-// import { getOwnershipContract } from "@/utils/loadContract"; ❌ Ownership contract not used for Insurance
 import axios from "axios";
 import ImageUpload from "@/components/shared/ImageUpload";
-import { useUserPolicies } from "@/hooks/useUserPolicies"; // 🔁 Consider renaming later
+import { useUserPolicies } from "@/hooks/useUserPolicies"; 
 import { fetchMaticPrice } from "@/utils/fetchMaticPrice";
 import PrimaryButton from "@/components/shared/PrimaryButton";
 
@@ -25,97 +24,7 @@ export default function CreatePolicy({
   async function handleCreatePolicy(event: React.FormEvent) {
     event.preventDefault();
 
-    // ❌ Skip real estate contract logic for now
-  //  alert("🔧 Policy creation coming soon!");
-  //  return;
-
-    /*
-    if (!ownershipContract || !account) {
-      alert("❌ Insurance contract or account not loaded.");
-      return;
-    }
-
-    console.log("📤 Debugging Policy Creation:", {
-      policyName,
-      imageFilename,
-      coverageUnits,
-      valuation,
-    });
-
-    try {
-      const provider = new ethers.BrowserProvider(window.ethereum);
-      const signer = await provider.getSigner();
-      const insuranceInstance = await getOwnershipContract(signer);
-
-      if (!insuranceInstance) {
-        console.error("❌ getOwnershipContract returned undefined.");
-        return;
-      }
-
-      if (!policyName.trim()) {
-        alert("❌ Policy name is required.");
-        return;
-      }
-
-      const finalImageFilename = imageFilename?.startsWith("/uploads/")
-        ? imageFilename
-        : `/uploads/${imageFilename}`;
-
-      const maticPrice = await fetchMaticPrice();
-      const valuationInMatic = ethers.parseUnits(
-        (Number(valuation) / maticPrice).toFixed(6),
-        "ether"
-      );
-
-      if (!valuationInMatic || valuationInMatic <= 0n) {
-        alert("❌ Invalid valuation amount.");
-        return;
-      }
-
-      const coverageUnitsNumber = Number(coverageUnits);
-      if (coverageUnitsNumber <= 0) {
-        alert("❌ Invalid coverage units.");
-        return;
-      }
-
-      let gasLimit;
-      try {
-        gasLimit = await insuranceInstance.addProperty.estimateGas(
-          policyName,
-          finalImageFilename,
-          coverageUnits.toString(),
-          valuationInMatic
-        );
-      } catch (error) {
-        console.error("❌ Gas estimation failed:", error);
-        alert("❌ Error estimating gas.");
-        return;
-      }
-
-      const tx = await insuranceInstance.addProperty(
-        policyName,
-        finalImageFilename,
-        coverageUnits.toString(),
-        valuationInMatic,
-        { gasLimit }
-      );
-
-      await tx.wait();
-      alert(`✅ Policy "${policyName}" created successfully!`);
-
-      setPolicyName("");
-      setValuation("");
-      setCoverageUnits("");
-      refreshPolicies();
-    } catch (error: any) {
-      console.error("❌ Error creating policy:", error);
-      if (error.code === "ACTION_REJECTED") {
-        alert("❌ Transaction rejected.");
-      } else {
-        alert(error.message || "Unknown error occurred.");
-      }
-    }
-    */
+    
   }
 
   return (

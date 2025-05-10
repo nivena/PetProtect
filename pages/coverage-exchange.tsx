@@ -12,7 +12,7 @@ export default function Marketplace() {
             Insurance Policy Marketplace
             <img
               src="/fsre-logo.png"
-              alt="FractionalHQ Logo"
+              alt="Pet Protect Logo"
               className="h-8 w-8 rounded-full object-contain border border-gray-300 shadow-sm"
             />
           </h1>

@@ -8,7 +8,6 @@ import Layout from "@/components/shared/Layout";
 import HeroSection from "@/components/shared/HeroSection";
 import CategoryNav from "@/components/shared/CategoryNav";
 import CallToAction from "@/components/shared/CallToAction";
-//import FeaturedPolicies from "@/components/policies/FeaturedPolicies"; // You can replace or rename this later
 
 export default function Home() {
   const [account, setAccount] = useState<string | null>(null);
@@ -45,7 +44,7 @@ export default function Home() {
     <Layout>
      <div
   className="relative min-h-screen flex flex-col bg-cover bg-top bg-no-repeat mt-[72px]"
-  style={{ backgroundImage: "url('/backgrounds/Insurancetouse.jpg')" }}
+  style={{ backgroundImage: "url('/backgrounds/BackgroundInsurance.jpg')" }}
 >
 
   <div className="absolute inset-0 bg-black/40 z-0" />
@@ -64,12 +63,6 @@ export default function Home() {
               />
             </div>
           </div>
-
-                  {/* 🔍 Show Featured Policies if connected */}
-          {/* {account && policyContract && (
-            <FeaturedPolicies ownershipContract={policyContract} />
-          )} */}
-
 
           <CallToAction />
         </div>
