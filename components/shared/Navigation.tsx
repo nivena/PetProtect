@@ -25,12 +25,12 @@ export default function Navigation() {
   const [infoOpen, setInfoOpen] = useState(false);
 
   return (
-    <nav className="bg-[#272d32] fixed top-0 w-full z-50 p-4 flex justify-between items-center text-white shadow-md border-b-2 border-[#a084e8]">
+    <nav className="bg-[#272d32] fixed top-0 w-full z-50 p-4 flex justify-between items-center text-white shadow-md border-b-2 border-[#e0c370]/40">
       {/* Logo + Title */}
       <a href="/" className="flex items-center space-x-3">
         <Image
           src="/fsre-logo.png"
-          alt="FSRE Logo"
+          alt="Pet Protect Logo"
           width={44}
           height={44}
           className="rounded-full"
@@ -78,15 +78,8 @@ export default function Navigation() {
             </div>
           </Link>
         </li>
-        <li>
-      {/*}  <Link href="/my-coverage" onClick={() => setMenuOpen(false)}>
-  <div className="flex items-center gap-1 text-[#e0c370] hover:text-white transition-colors cursor-pointer">
-    <FaFolderOpen className="text-lg" />
-    <span>My Coverage</span>
-  </div>
-</Link>  */}
-        </li>
-       {/* Dropdown for Info */}
+      
+      
 {/* Dropdown for Info */}
 <li
   className="relative group"
