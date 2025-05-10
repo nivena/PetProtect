@@ -34,3 +34,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+<pre> ## 🧱 Project Structure ```bash components/ ├── policies/ # Insurance-related UI (buy, view, coverage grid) └── shared/ # Navbar, footer, layout, CTA, wallet button, etc. pages/ ├── index.tsx # Homepage (hero + category nav) ├── dashboard.tsx # User dashboard (policy overview) ├── coverage-exchange.tsx # Marketplace-style policy plans ├── create-policy.tsx # Admin or test plan creation ├── my-coverage.tsx # Purchased policy viewer ├── about.tsx, whats-covered.tsx, why-its-so-affordable.tsx hooks/ ├── useCoverageExchange.ts # Load static or future dynamic plans ├── useMyPolicies.ts # Fetch user's purchased policies └── useUserPolicies.ts # Load all user-created policies (if needed) utils/ ├── connectWallet.ts ├── loadContract.ts ├── purchasePolicy.ts └── misc helpers: formatPrice, fetchMaticPrice, etc. ``` </pre>
+
