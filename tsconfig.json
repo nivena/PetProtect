@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ES2020",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "baseUrl": ".", 
+    "allowJs": true,
+    "noEmit": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "plugins": [{ "name": "next" }],
+    "paths": {
+      "@/*": ["./*"]  // ✅ This allows absolute imports
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "contracts/**/*",
+    "hardhat.config.ts",
+    "next-env.d.ts",
+    "scripts/**/*",
+    ".next/types/**/*.ts"
+, "pages/ratings", "pages/proposals", "pages/policy", "pages/marketplace", "pages/dashboard", "pages/add-property", "pages/about"  ],
+  "exclude": ["node_modules"]
+}

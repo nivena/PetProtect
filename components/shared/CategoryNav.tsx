@@ -1,0 +1,31 @@
+import React from "react";
+import Link from "next/link";
+import { FaDog, FaCat, FaPlane, FaHome, FaMobileAlt, FaCar } from "react-icons/fa";
+
+const categories = [
+  { name: "Dog", icon: FaDog, link: "/coverage-exchange" },
+  { name: "Cat", icon: FaCat, link: "/coverage-exchange" },
+  { name: "Travel", icon: FaPlane, link: "#coming-soon" },
+  { name: "Home", icon: FaHome, link: "#coming-soon" },
+  { name: "Electronics", icon: FaMobileAlt, link: "#coming-soon" },
+  { name: "Auto", icon: FaCar, link: "#coming-soon" },
+];
+
+export default function CategoryNav() {
+  return (
+    <div className="mt-2 mb-2 border-b border-gray-200 pb-4">
+      <div className="flex overflow-x-auto gap-6 px-2">
+        {categories.map((cat) => (
+          <Link
+            key={cat.name}
+            href={cat.link}
+            className="group flex flex-col items-center text-white hover:text-[#e0c370] transition-colors cursor-pointer"
+          >
+            <cat.icon className="text-2xl mb-1 group-hover:text-[#e0c370]" />
+            <span className="text-sm">{cat.name}</span>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
