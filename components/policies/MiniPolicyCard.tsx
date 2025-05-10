@@ -1,4 +1,3 @@
-// components/policies/MiniPolicyCard.tsx
 import React from "react";
 import Link from "next/link";
 import { format } from "date-fns";
@@ -6,7 +5,6 @@ import { format } from "date-fns";
 export interface MiniPolicy {
   id: number;
   petName: string;
-  insuredAmount: string;
   startDate: number;
   endDate: number;
   active: boolean;

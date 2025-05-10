@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { ethers } from "ethers";
-import axios from "axios";
 import ImageUpload from "@/components/shared/ImageUpload";
-import { useUserPolicies } from "@/hooks/useUserPolicies"; 
-import { fetchMaticPrice } from "@/utils/fetchMaticPrice";
+import { useUserPolicies } from "@/hooks/useUserPolicies";
 import PrimaryButton from "@/components/shared/PrimaryButton";
 
 export default function CreatePolicy({
@@ -23,8 +21,7 @@ export default function CreatePolicy({
 
   async function handleCreatePolicy(event: React.FormEvent) {
     event.preventDefault();
-
-    
+    console.log("🚧 Create policy logic goes here.");
   }
 
   return (
