@@ -2,8 +2,7 @@ import { ethers } from "ethers";
 
 export async function purchasePolicy(
   policyContract: ethers.Contract,
-  petName: string,
-  planId: number,
+  petName: string
 ) {
   try {
     if (!petName || petName.trim().length < 2) {
@@ -12,7 +11,7 @@ export async function purchasePolicy(
     }
 
     const tx = await policyContract.createPolicy(petName, {
-      value: ethers.parseUnits("0.01", "ether"),
+      value: ethers.parseUnits("0.01", "ether"), // Must match PREMIUM_PRICE in contract
       gasLimit: ethers.toBigInt(250000),
       maxPriorityFeePerGas: ethers.parseUnits("100", "gwei"),
       maxFeePerGas: ethers.parseUnits("150", "gwei"),

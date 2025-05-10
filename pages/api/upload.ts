@@ -10,7 +10,6 @@ export const config = {
   },
 };
 
-// ✅ Allowed file types
 const allowedExtensions = [".jpg", ".jpeg", ".png"];
 
 export default async function handler(
@@ -21,7 +20,7 @@ export default async function handler(
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const form = new IncomingForm({ keepExtensions: true });
+  const form = new IncomingForm({ keepExtensions: true, maxFileSize: 5 * 1024 * 1024 });
 
   form.parse(req, async (err, fields, files) => {
     if (err) {
@@ -33,32 +32,27 @@ export default async function handler(
       return res.status(400).json({ error: "No file uploaded." });
     }
 
-    // ✅ Validate file type
     const fileExt = path.extname(file.originalFilename || "").toLowerCase();
     if (!allowedExtensions.includes(fileExt)) {
-      return res
-        .status(400)
-        .json({ error: "Invalid file type. Upload a .jpg or .png file." });
+      return res.status(400).json({
+        error: "Invalid file type. Upload a .jpg or .png file.",
+      });
     }
 
-    // ✅ Define Upload Directory
     const uploadDir = path.join(process.cwd(), "public/uploads");
     if (!fs.existsSync(uploadDir)) {
-      fs.mkdirSync(uploadDir, { recursive: true }); // ✅ Ensure the directory exists
+      fs.mkdirSync(uploadDir, { recursive: true });
     }
 
-    // ✅ Rename file for uniqueness
-    const newFilename = `${Date.now()}_${file.originalFilename}`;
+    const originalName = path.basename(file.originalFilename || "").replace(/[^a-z0-9.\-_]/gi, "_");
+    const newFilename = `${Date.now()}_${originalName}`;
     const newPath = path.join(uploadDir, newFilename);
 
     try {
-      // ✅ Move file to permanent directory
-      fs.copyFileSync(file.filepath, newPath); // ✅ Copy file instead of renaming
-      fs.unlinkSync(file.filepath); // ✅ Delete the temp file after copying
+      fs.copyFileSync(file.filepath, newPath);
+      fs.unlinkSync(file.filepath);
 
       console.log(`✅ File uploaded: ${newFilename}`);
-
-      // ✅ Send back the API path for accessing the image
       res.status(200).json({ filename: newFilename });
     } catch (error) {
       console.error("❌ File move error:", error);
@@ -66,4 +60,3 @@ export default async function handler(
     }
   });
 }
-// ✅ Disable Next.js default body parsing (Required for file uploads)
