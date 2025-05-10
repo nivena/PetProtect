@@ -2,7 +2,8 @@ import { ethers } from "ethers";
 
 export async function purchasePolicy(
   policyContract: ethers.Contract,
-  petName: string
+  petName: string,
+  planId: number,
 ) {
   try {
     if (!petName || petName.trim().length < 2) {
