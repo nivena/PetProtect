@@ -11,11 +11,11 @@ export default function Home() {
       <div
         className="relative min-h-screen flex flex-col bg-cover bg-top bg-no-repeat mt-[72px]"
         style={{
-          backgroundImage: "url('/backgrounds/BackgroundInsurance.jpg')",
+          backgroundImage: "url('/backgrounds/BackgroundInsurance.png')",
         }}
       >
         <div className="absolute inset-0 bg-black/40 z-0" />
-        <div className="relative z-10 pt-20 container mx-auto p-6">
+        <div className="relative z-10 pt-10 container mx-auto p-6">
           <HeroSection />
 
           {/* 🔄 Categories + Search */}

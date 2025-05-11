@@ -30,12 +30,12 @@ export default function Dashboard() {
       <div className="flex">
         <Sidebar />
 
-        <main className="flex-1 ml-64 p-6 pt-20 bg-gradient-to-br from-[#f9fafb] to-[#eef2f7] min-h-screen">
+        <main className="flex-1 ml-64 p-6 pt-28 bg-gradient-to-br from-[#f9fafb] to-[#eef2f7] min-h-screen">
           <h1 className="text-3xl font-bold text-center flex items-center justify-center gap-3 text-[#272d32]">
             <FaChartBar className="text-2xl" />
             Dashboard
             <img
-              src="/fsre-logo.png"
+              src="/Logo.png"
               alt="Pet Protect Logo"
               className="h-8 w-8 rounded-full object-contain border border-gray-300 shadow-sm"
             />

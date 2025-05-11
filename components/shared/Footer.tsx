@@ -5,7 +5,7 @@ export default function Footer({ className = "" }: { className?: string }) {
     <footer
       className={`bg-[#272d32] text-white text-sm py-4 px-6 border-t border-[#8ac6ff]/30 ${className}`}
     >
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-4">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
         {/* LEFT: Text */}
         <div className="space-y-1 text-left">
           <p>© {new Date().getFullYear()} Pet Protect. All rights reserved.</p>
@@ -21,7 +21,18 @@ export default function Footer({ className = "" }: { className?: string }) {
           </p>
         </div>
 
-        {/* RIGHT: Logo */}
+        {/* CENTER: FractionalHQ Logo */}
+        <div className="flex justify-center">
+          <Image
+            src="/fractionalhqlogo.png"
+            alt="Built by FractionalHQ"
+            width={100}
+            height={100}
+            className="object-contain rounded-full opacity-90"
+          />
+        </div>
+
+        {/* RIGHT: Polygon Logo */}
         <div className="flex items-start justify-end">
           <Image
             src="/backgrounds/Polygonsleek.png"

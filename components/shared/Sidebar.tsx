@@ -4,8 +4,9 @@ import Image from "next/image";
 
 export default function Sidebar() {
   return (
-    <div className="hidden md:block w-64 bg-[#272d32] text-[#e0c370] h-screen fixed pt-20">
-      <ul className="space-y-6 p-6 text-md font-medium">
+    <div className="hidden md:flex flex-col w-64 bg-[#272d32] text-[#e0c370] h-screen fixed pt-20 justify-between">
+      {/* Nav Links Section */}
+      <ul className="space-y-6 p-10 text-md font-medium">
         <li>
           <Link
             href="/dashboard"
@@ -35,14 +36,14 @@ export default function Sidebar() {
         </li>
       </ul>
 
-      {/* ⬇ Logo at the bottom */}
-      <div className="p-4 flex justify-center">
-        <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-gold shadow-lg">
+      {/* Logo at Bottom */}
+      <div className="px-6 py-10 flex justify-center">
+        <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#e0c370] shadow-lg">
           <Image
-            src="/fsre-logo.png"
-            alt="Pet Protect Logo"
-            width={100}
-            height={100}
+            src="/fractionalhqlogo.png"
+            alt="FractionalHQ Logo"
+            width={64}
+            height={64}
             className="object-cover"
           />
         </div>

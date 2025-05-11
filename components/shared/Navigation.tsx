@@ -29,11 +29,11 @@ export default function Navigation() {
       {/* Logo + Title */}
       <a href="/" className="flex items-center space-x-3">
         <Image
-          src="/fsre-logo.png"
+          src="/Logo.png"
           alt="Pet Protect Logo"
-          width={44}
-          height={44}
-          className="rounded-full"
+          width={70}
+          height={50}
+          className="rounded-full object-contain bg-white"
         />
         <h1 className="text-2xl font-bold text-[#e0c370] tracking-wide">
           Pet Protect
