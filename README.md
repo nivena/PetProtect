@@ -130,7 +130,7 @@ Go to Dashboard → see My Coverage
 
 ### 🧠 Built with ❤️ by FractionalHQ
 
-<p align="center">
+<p align="center rounded-full">
   <img src="fractionalhqlogo.png" alt="Built by FractionalHQ" width="120" style="border-radius: 50%;" />
 </p>
 No offices. No call centers. Just decentralized insurance.
