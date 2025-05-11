@@ -1,12 +1,15 @@
 // utils/createPlan.ts
 import { ethers } from "ethers";
 
+/**
+ * Create a new insurance plan via smart contract
+ */
 export async function createPlan(
   policyContract: ethers.Contract,
   title: string,
   petType: string,
-  price: number,
-  insuredAmount: number,
+  price: number, // in MATIC
+  insuredAmount: number, // in MATIC
   durationInDays: number
 ) {
   try {
