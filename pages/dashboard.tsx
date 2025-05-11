@@ -7,7 +7,7 @@ import Layout from "@/components/shared/Layout";
 import Sidebar from "@/components/shared/Sidebar";
 import PrimaryButton from "@/components/shared/PrimaryButton";
 import MiniPolicyGrid from "@/components/policies/MiniPolicyGrid";
-import CreatePolicy from "@/components/policies/CreatePolicy";
+import CreatePolicy from "@/components/policies/CreatePlan";
 import { useMyPolicies } from "@/hooks/useMyPolicies";
 import { FaChartBar, FaPlusCircle, FaMinusCircle } from "react-icons/fa";
 

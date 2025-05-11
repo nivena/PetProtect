@@ -42,7 +42,7 @@ export default function AboutPage() {
           <div className="flex justify-center my-8">
             <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-[#e0c370] shadow-lg animate-fadeIn">
               <Image
-                src="/fsre-logo.png"
+                src="/fractionalhqlogo.png"
                 alt="Pet Protect Logo"
                 width={112}
                 height={112}

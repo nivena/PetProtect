@@ -6,13 +6,13 @@ import PolicyListings from "@/components/policies/PolicyListings";
 export default function CoverageExchange() {
   return (
     <Layout>
-      <div className="bg-gradient-to-br from-[#f9fafb] to-[#eef2f7] min-h-screen pt-24 px-6">
+      <div className="bg-gradient-to-br from-[#f9fafb] to-[#eef2f7] min-h-screen pt-32 px-6">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl font-bold text-center flex items-center justify-center gap-3">
             Choose Your Coverage Plan
             <img
-              src="/fsre-logo.png"
-              alt="Pet Protect Logo"
+              src="/fractionalhqlogo.png"
+              alt="FractionalHQ Logo"
               className="h-8 w-8 rounded-full object-contain border border-gray-300 shadow-sm"
             />
           </h1>
