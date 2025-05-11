@@ -20,7 +20,10 @@ export default async function handler(
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const form = new IncomingForm({ keepExtensions: true, maxFileSize: 5 * 1024 * 1024 });
+  const form = new IncomingForm({
+    keepExtensions: true,
+    maxFileSize: 5 * 1024 * 1024,
+  });
 
   form.parse(req, async (err, fields, files) => {
     if (err) {
@@ -44,7 +47,9 @@ export default async function handler(
       fs.mkdirSync(uploadDir, { recursive: true });
     }
 
-    const originalName = path.basename(file.originalFilename || "").replace(/[^a-z0-9.\-_]/gi, "_");
+    const originalName = path
+      .basename(file.originalFilename || "")
+      .replace(/[^a-z0-9.\-_]/gi, "_");
     const newFilename = `${Date.now()}_${originalName}`;
     const newPath = path.join(uploadDir, newFilename);
 

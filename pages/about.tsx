@@ -14,24 +14,29 @@ export default function AboutPage() {
           </h1>
 
           <blockquote className="italic text-center text-blue-600 text-xl mb-6">
-            "Decentralized protection. Transparent claims. Community-powered insurance."
+            "Decentralized protection. Transparent claims. Community-powered
+            insurance."
           </blockquote>
 
           <p className="text-lg mb-4 leading-relaxed text-center">
-            <strong>{BRAND_NAME}</strong> is reshaping how we protect the things we love—
-            starting with our pets. We believe insurance should be transparent, accessible, and fair.
-            Using blockchain technology, we enable people to co-fund risk pools and vote on claims
-            without relying on legacy insurers.
+            <strong>{BRAND_NAME}</strong> is reshaping how we protect the things
+            we love— starting with our pets. We believe insurance should be
+            transparent, accessible, and fair. Using blockchain technology, we
+            enable people to co-fund risk pools and vote on claims without
+            relying on legacy insurers.
           </p>
 
           <p className="text-md text-gray-700 leading-relaxed mb-6">
-            Our platform is powered by smart contracts on <strong>Polygon</strong>, enabling
-            dog and cat owners to join decentralized insurance pools. Members stake into shared
-            coverage plans, then propose and vote on claims—all recorded transparently on-chain.
+            Our platform is powered by smart contracts on{" "}
+            <strong>Polygon</strong>, enabling dog and cat owners to join
+            decentralized insurance pools. Members stake into shared coverage
+            plans, then propose and vote on claims—all recorded transparently
+            on-chain.
           </p>
 
           <p className="text-lg mb-4 leading-relaxed text-center">
-            Community-based coverage for the Web3 era—fair, fast, and collectively owned.
+            Community-based coverage for the Web3 era—fair, fast, and
+            collectively owned.
           </p>
 
           <div className="flex justify-center my-8">
@@ -49,19 +54,20 @@ export default function AboutPage() {
           <div className="mt-10 text-center">
             <h2 className="text-2xl font-semibold mb-4">Our Vision</h2>
             <p className="text-md text-gray-600 max-w-2xl mx-auto">
-              A world where anyone can create or join coverage pools—protecting pets, livelihoods,
-              or events—without bureaucracy or middlemen. We're starting with animals, but the
-              possibilities go far beyond.
+              A world where anyone can create or join coverage pools—protecting
+              pets, livelihoods, or events—without bureaucracy or middlemen.
+              We're starting with animals, but the possibilities go far beyond.
             </p>
           </div>
 
           <div className="mt-10 text-center">
             <h2 className="text-2xl font-semibold mb-4">Founding Ethos</h2>
             <p className="text-md text-gray-600 max-w-2xl mx-auto">
-              Pet Protect was born out of frustration with outdated systems. Built between Kuala
-              Lumpur and Singapore, it reflects a new mindset: mutual trust, blockchain
-              transparency, and user-governed decisions. Our team believes insurance should be a
-              public utility—not a profit-first industry.
+              Pet Protect was born out of frustration with outdated systems.
+              Built between Kuala Lumpur and Singapore, it reflects a new
+              mindset: mutual trust, blockchain transparency, and user-governed
+              decisions. Our team believes insurance should be a public
+              utility—not a profit-first industry.
             </p>
           </div>
 

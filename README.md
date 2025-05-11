@@ -8,13 +8,13 @@ Built on Polygon. Pay in MATIC.
 
 ## 🚀 Features
 
-- 🐕 Buy pet insurance with just a wallet — no KYC  
-- 💸 MATIC-based payments with live price support  
-- 📂 View purchased policies in your "My Coverage" dashboard  
-- 🖼️ Upload custom images for each policy  
-- 🧩 Modular code — easily extend with claims or governance  
-- 💼 White-label friendly: customize brand, text, images  
-- ⚙️ Deployed on Polygon Amoy testnet (ETH L2)  
+- 🐕 Buy pet insurance with just a wallet — no KYC
+- 💸 MATIC-based payments with live price support
+- 📂 View purchased policies in your "My Coverage" dashboard
+- 🖼️ Upload custom images for each policy
+- 🧩 Modular code — easily extend with claims or governance
+- 💼 White-label friendly: customize brand, text, images
+- ⚙️ Deployed on Polygon Amoy testnet (ETH L2)
 
 ---
 
@@ -44,6 +44,7 @@ utils/
 ├── purchasePolicy.ts
 └── misc helpers: formatPrice, fetchMaticPrice, etc.
 ```
+
 ---
 
 ## ⚙️ Getting Started
@@ -54,28 +55,37 @@ utils/
 git clone https://github.com/YOUR_USERNAME/fractionalhq-pet.git
 cd fractionalhq-pet
 ```
+
 ### 2️⃣ Install Dependencies
+
 ```
 npm install
 ```
+
 ### 3️⃣ Set Environment Variables
+
 Create a .env.local file:
+
 ```
 NEXT_PUBLIC_POLICY_CONTRACT=0xYourContractAddress
 NEXT_PUBLIC_CHAIN_ID=80002
 NEXT_PUBLIC_RPC_URL=https://polygon-amoy.infura.io/v3/YOUR_INFURA_ID
 NEXT_PUBLIC_PINATA_JWT=Bearer YOUR_PINATA_JWT
 ```
+
 Uses Polygon Amoy Testnet (chain ID 80002).
 You can use Pinata or Web3.Storage for IPFS uploads.
 
 ### 4️⃣ Run Locally
+
 ```
 npm run dev
 ```
+
 Visit: http://localhost:3000
 
 ### 🔐 Smart Contract Info
+
 Contract: PetPolicy.sol
 
 Network: Polygon Amoy Testnet
@@ -85,6 +95,7 @@ Use scripts/deployPetPolicy.cjs to deploy
 Store contract address in .env.local under NEXT_PUBLIC_POLICY_CONTRACT
 
 ### 💼 Licensing & Usage
+
 This repo is a white-label starter kit.
 It’s free to use for demo or educational purposes.
 
@@ -94,6 +105,7 @@ For production use, premium modules, or support:
 🌐 https://fractionalhq.com
 
 ### 💡 Want More?
+
 Upgrade to a paid plan and unlock:
 
 ✅ submitClaim() flow — users file claims on-chain
@@ -105,6 +117,7 @@ Upgrade to a paid plan and unlock:
 📦 Expansion packs: TravelProtect, ElectronicsProtect, HomeProtect
 
 ### 🧪 MVP Walkthrough (Demo Script)
+
 Visit homepage → click “Dog” or “Cat”
 
 View available policies
@@ -116,4 +129,5 @@ Go to Dashboard → see My Coverage
 (Optional) Enable Claims or Governance if licensed
 
 ### 🧠 Built with ❤️ by FractionalHQ
+
 No offices. No call centers. Just decentralized insurance.

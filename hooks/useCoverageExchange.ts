@@ -14,7 +14,9 @@ type Plan = {
 };
 
 export function useCoverageExchange() {
-  const [policyContract, setPolicyContract] = useState<ethers.Contract | null>(null);
+  const [policyContract, setPolicyContract] = useState<ethers.Contract | null>(
+    null
+  );
   const [account, setAccount] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [plans, setPlans] = useState<Plan[]>([]);
@@ -61,4 +63,3 @@ export function useCoverageExchange() {
 
   return { policyContract, account, loading, plans };
 }
-

@@ -5,7 +5,6 @@ import { FaDog, FaCat } from "react-icons/fa";
 const categories = [
   { name: "Dog", icon: FaDog, link: "/coverage-exchange" },
   { name: "Cat", icon: FaCat, link: "/coverage-exchange" },
-  
 ];
 
 export default function CategoryNav() {

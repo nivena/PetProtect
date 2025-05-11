@@ -11,12 +11,14 @@ type CoveragePolicy = {
   claimCount: number;
 };
 
-export default function MyCoverage({ policies }: { policies: CoveragePolicy[] }) {
+export default function MyCoverage({
+  policies,
+}: {
+  policies: CoveragePolicy[];
+}) {
   if (!policies || policies.length === 0) {
     return (
-      <p className="text-gray-500">
-        You haven’t purchased any policies yet.
-      </p>
+      <p className="text-gray-500">You haven’t purchased any policies yet.</p>
     );
   }
 
@@ -51,4 +53,3 @@ export default function MyCoverage({ policies }: { policies: CoveragePolicy[] })
     </div>
   );
 }
-

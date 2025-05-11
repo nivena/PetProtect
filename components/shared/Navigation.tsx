@@ -78,59 +78,57 @@ export default function Navigation() {
             </div>
           </Link>
         </li>
-      
-      
-{/* Dropdown for Info */}
-<li
-  className="relative group"
- 
->
-  {/* Info Button */}
-  <button
-    onClick={() => setInfoOpen(!infoOpen)}
-    className="flex items-center gap-1 text-[#e0c370] hover:text-white transition-colors cursor-pointer focus:outline-none"
-  >
-    <FaInfoCircle className="text-lg" />
-    <span>Info</span>
-    <span className="ml-1">{infoOpen ? "▲" : "▼"}</span>
-  </button>
 
-  {/* Dropdown Menu */}
-  {infoOpen && (
-    <div className="absolute left-0 mt-2 w-56 bg-[#272d32] shadow-lg rounded-md py-2 px-4 z-50">
-      <ul className="space-y-2">
-        <li>
-          <Link href="/about" onClick={() => setInfoOpen(false)}>
-            <div className="flex items-center gap-2 text-[#e0c370] hover:text-white transition-colors">
-              <FaInfoCircle className="text-md" />
-              <span>About</span>
+        {/* Dropdown for Info */}
+        <li className="relative group">
+          {/* Info Button */}
+          <button
+            onClick={() => setInfoOpen(!infoOpen)}
+            className="flex items-center gap-1 text-[#e0c370] hover:text-white transition-colors cursor-pointer focus:outline-none"
+          >
+            <FaInfoCircle className="text-lg" />
+            <span>Info</span>
+            <span className="ml-1">{infoOpen ? "▲" : "▼"}</span>
+          </button>
+
+          {/* Dropdown Menu */}
+          {infoOpen && (
+            <div className="absolute left-0 mt-2 w-56 bg-[#272d32] shadow-lg rounded-md py-2 px-4 z-50">
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/about" onClick={() => setInfoOpen(false)}>
+                    <div className="flex items-center gap-2 text-[#e0c370] hover:text-white transition-colors">
+                      <FaInfoCircle className="text-md" />
+                      <span>About</span>
+                    </div>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/whats-covered"
+                    onClick={() => setInfoOpen(false)}
+                  >
+                    <div className="flex items-center gap-2 text-[#e0c370] hover:text-white transition-colors">
+                      <FaShieldAlt className="text-md" />
+                      <span>What’s Covered</span>
+                    </div>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/why-its-so-affordable"
+                    onClick={() => setInfoOpen(false)}
+                  >
+                    <div className="flex items-center gap-2 text-[#e0c370] hover:text-white transition-colors">
+                      <FaDollarSign className="text-md" />
+                      <span>Why It’s So Affordable</span>
+                    </div>
+                  </Link>
+                </li>
+              </ul>
             </div>
-          </Link>
+          )}
         </li>
-        <li>
-          <Link href="/whats-covered" onClick={() => setInfoOpen(false)}>
-            <div className="flex items-center gap-2 text-[#e0c370] hover:text-white transition-colors">
-              <FaShieldAlt className="text-md" />
-              <span>What’s Covered</span>
-            </div>
-          </Link>
-        </li>
-        <li>
-          <Link href="/why-its-so-affordable" onClick={() => setInfoOpen(false)}>
-            <div className="flex items-center gap-2 text-[#e0c370] hover:text-white transition-colors">
-              <FaDollarSign className="text-md" />
-              <span>Why It’s So Affordable</span>
-            </div>
-          </Link>
-        </li>
-      </ul>
-    </div>
-  )}
-</li>
-
-
-
-
       </ul>
 
       {/* Wallet */}
@@ -166,5 +164,3 @@ export default function Navigation() {
     </nav>
   );
 }
-
-

@@ -10,7 +10,9 @@ export default function Home() {
     <Layout>
       <div
         className="relative min-h-screen flex flex-col bg-cover bg-top bg-no-repeat mt-[72px]"
-        style={{ backgroundImage: "url('/backgrounds/BackgroundInsurance.jpg')" }}
+        style={{
+          backgroundImage: "url('/backgrounds/BackgroundInsurance.jpg')",
+        }}
       >
         <div className="absolute inset-0 bg-black/40 z-0" />
         <div className="relative z-10 pt-20 container mx-auto p-6">
@@ -34,5 +36,3 @@ export default function Home() {
     </Layout>
   );
 }
-
-

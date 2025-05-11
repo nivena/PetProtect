@@ -4,7 +4,6 @@ import ImageUpload from "@/components/shared/ImageUpload";
 import PrimaryButton from "@/components/shared/PrimaryButton";
 
 export default function CreatePolicy() {
-
   const [policyName, setPolicyName] = useState("");
   const [valuation, setValuation] = useState("");
   const [coverageUnits, setCoverageUnits] = useState("");
@@ -54,5 +53,3 @@ export default function CreatePolicy() {
     </div>
   );
 }
-
-

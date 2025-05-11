@@ -7,12 +7,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-      <title>PetProtect | Web3 Pet Insurance, No Middlemen</title>
-      <link rel="icon" href="/favicon.ico" />
+        <title>PetProtect | Web3 Pet Insurance, No Middlemen</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
       <Component {...pageProps} />
     </>
   );
 }
-

@@ -35,4 +35,3 @@ export default function Footer({ className = "" }: { className?: string }) {
     </footer>
   );
 }
-

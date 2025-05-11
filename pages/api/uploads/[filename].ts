@@ -33,4 +33,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader("Content-Type", mimeTypes[ext] || "application/octet-stream");
   res.status(200).end(fileBuffer);
 }
-

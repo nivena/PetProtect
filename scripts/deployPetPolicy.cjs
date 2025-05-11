@@ -16,11 +16,12 @@ async function main() {
 
   const contractAddress = await contract.getAddress();
   console.log(`✅ PetPolicy deployed at: ${contractAddress}`);
-  console.log(`🔗 View on PolygonScan: https://amoy.polygonscan.com/address/${contractAddress}`);
+  console.log(
+    `🔗 View on PolygonScan: https://amoy.polygonscan.com/address/${contractAddress}`
+  );
 }
 
 main().catch((error) => {
   console.error("❌ Deployment failed:", error);
   process.exit(1);
 });
-

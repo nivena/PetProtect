@@ -54,7 +54,10 @@ export default function Dashboard() {
             />
             {policies.length > 4 && (
               <div className="text-right mt-2">
-                <a href="/my-coverage" className="text-sm text-blue-600 hover:underline">
+                <a
+                  href="/my-coverage"
+                  className="text-sm text-blue-600 hover:underline"
+                >
                   See all →
                 </a>
               </div>
@@ -92,4 +95,3 @@ export default function Dashboard() {
     </Layout>
   );
 }
-

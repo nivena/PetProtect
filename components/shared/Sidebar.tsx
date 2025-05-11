@@ -1,9 +1,5 @@
 import Link from "next/link";
-import {
-  FaChartBar,
-  FaFolderOpen,
-  FaListAlt,
-} from "react-icons/fa";
+import { FaChartBar, FaFolderOpen, FaListAlt } from "react-icons/fa";
 import Image from "next/image";
 
 export default function Sidebar() {
@@ -11,33 +7,32 @@ export default function Sidebar() {
     <div className="hidden md:block w-64 bg-[#272d32] text-[#e0c370] h-screen fixed pt-20">
       <ul className="space-y-6 p-6 text-md font-medium">
         <li>
-          <Link href="/dashboard" className="flex items-center gap-2 hover:text-white transition">
+          <Link
+            href="/dashboard"
+            className="flex items-center gap-2 hover:text-white transition"
+          >
             <FaChartBar className="text-lg" />
             Dashboard
           </Link>
         </li>
         <li>
-          <Link href="/my-coverage" className="flex items-center gap-2 hover:text-white transition">
+          <Link
+            href="/my-coverage"
+            className="flex items-center gap-2 hover:text-white transition"
+          >
             <FaFolderOpen className="text-lg" />
             My Coverage
           </Link>
         </li>
         <li>
-          <Link href="/coverage-exchange" className="flex items-center gap-2 hover:text-white transition">
+          <Link
+            href="/coverage-exchange"
+            className="flex items-center gap-2 hover:text-white transition"
+          >
             <FaListAlt className="text-lg" />
             Coverage Exchange
           </Link>
         </li>
-
-        {/* Proposals removed for MVP */}
-        {/*
-        <li>
-          <Link href="/proposals" className="flex items-center gap-2 hover:text-white transition">
-            <FaVoteYea className="text-lg" />
-            Proposals
-          </Link>
-        </li>
-        */}
       </ul>
 
       {/* ⬇ Logo at the bottom */}

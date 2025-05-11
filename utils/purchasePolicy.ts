@@ -24,4 +24,3 @@ export async function purchasePolicy(
     alert(error?.reason || error?.message || "Transaction failed.");
   }
 }
-

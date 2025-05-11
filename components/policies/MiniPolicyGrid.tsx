@@ -7,8 +7,10 @@ type Props = {
 };
 
 export default function MiniPolicyGrid({ policies, maxToShow = 4 }: Props) {
-  if (!policies || policies.length === 0) 
-  return <p className="text-sm text-gray-500">You have no active policies yet.</p>;
+  if (!policies || policies.length === 0)
+    return (
+      <p className="text-sm text-gray-500">You have no active policies yet.</p>
+    );
 
   return (
     <div className="mt-8">
@@ -23,4 +25,3 @@ export default function MiniPolicyGrid({ policies, maxToShow = 4 }: Props) {
     </div>
   );
 }
-

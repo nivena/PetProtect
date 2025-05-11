@@ -18,7 +18,11 @@ export default function MiniPolicyCard({ policy }: { policy: MiniPolicy }) {
       <p className="text-sm text-gray-600">
         Ends: {format(new Date(policy.endDate * 1000), "MMM do, yyyy")}
       </p>
-      <p className={`text-sm font-medium ${policy.active ? "text-green-600" : "text-red-500"}`}>
+      <p
+        className={`text-sm font-medium ${
+          policy.active ? "text-green-600" : "text-red-500"
+        }`}
+      >
         {policy.active ? "Active" : "Expired"}
       </p>
       <Link
