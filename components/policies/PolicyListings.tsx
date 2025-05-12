@@ -28,7 +28,7 @@ export default function PolicyListings() {
               title={`Coverage for ${plan.petType}`}
               width={400}
               height={220}
-              className="w-full h-[280px] object-top scale-[1.0]"
+              className="w-full h-[230px] object-contain mx-auto"
               onError={(e) => {
                 e.currentTarget.src = "/images/placeholder.jpg";
               }}

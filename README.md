@@ -78,6 +78,8 @@ You can use Pinata or Web3.Storage for IPFS uploads.
 
 ### 4️⃣ Run Locally
 
+> 💡 This app is optimized for **MetaMask**. Other wallets may work if they support `window.ethereum`, but MetaMask is officially supported.
+
 ```
 npm run dev
 ```
