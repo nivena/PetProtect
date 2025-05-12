@@ -116,6 +116,22 @@ Upgrade to a paid plan and unlock:
 
 📦 Expansion packs: TravelProtect, ElectronicsProtect, HomeProtect
 
+---
+
+### 💼 Feature Comparison
+
+| Feature                    | Free Tier (Demo) | Plus Tier (Pro) | Premium Tier (Claims) |
+| -------------------------- | :--------------: | :-------------: | :-------------------: |
+| ✅ Buy Standard Plans      |        ✅        |       ✅        |          ✅           |
+| 🐶 Enter Pet Name          |        ✅        |       ✅        |          ✅           |
+| 🖼️ Upload Custom Pet Image |        ✅        |       ✅        |          ✅           |
+| ➕ Create Custom Plans     |        ❌        |       ✅        |          ✅           |
+| 📄 Submit Claims           |        ❌        |       ❌        |          ✅           |
+
+> Want to unlock Plan Creation or Claims Submissions?  
+> Contact us at **[info@fractionalhq.com](mailto:info@fractionalhq.com)**  
+> or visit [fractionalhq.com](https://fractionalhq.com)
+
 ### 🧪 MVP Walkthrough (Demo Script)
 
 Visit homepage → click “Dog” or “Cat”

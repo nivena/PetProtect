@@ -5,15 +5,12 @@ import { connectWallet } from "@/utils/connectWallet";
 import Image from "next/image";
 import Layout from "@/components/shared/Layout";
 import Sidebar from "@/components/shared/Sidebar";
-import PrimaryButton from "@/components/shared/PrimaryButton";
 import MiniPolicyGrid from "@/components/policies/MiniPolicyGrid";
-import CreatePolicy from "@/components/policies/CreatePlan";
 import { useMyPolicies } from "@/hooks/useMyPolicies";
-import { FaChartBar, FaPlusCircle, FaMinusCircle } from "react-icons/fa";
+import { FaChartBar } from "react-icons/fa";
 
 export default function Dashboard() {
   const [account, setAccount] = useState<string | null>(null);
-  const [showAddPolicy, setShowAddPolicy] = useState(false);
   const { policies, loading: loadingPolicies } = useMyPolicies();
 
   useEffect(() => {
@@ -60,33 +57,6 @@ export default function Dashboard() {
                 >
                   See all →
                 </a>
-              </div>
-            )}
-          </div>
-
-          {/* ➕ Toggle Create Policy Form */}
-          <div className="mt-8">
-            <PrimaryButton
-              onClick={() => setShowAddPolicy((prev) => !prev)}
-              fullWidth={false}
-              className="text-sm px-4 py-1 text-gold"
-            >
-              {showAddPolicy ? (
-                <div className="flex items-center gap-2">
-                  <FaMinusCircle className="text-gold text-lg" />
-                  <span className="text-gold">Hide Create Policy</span>
-                </div>
-              ) : (
-                <div className="flex items-center gap-2">
-                  <FaPlusCircle className="text-gold text-lg" />
-                  <span className="text-gold">Create a New Policy</span>
-                </div>
-              )}
-            </PrimaryButton>
-
-            {showAddPolicy && (
-              <div className="mt-4">
-                <CreatePolicy />
               </div>
             )}
           </div>
