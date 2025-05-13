@@ -1,4 +1,4 @@
-# 🐾 PetProtect — Decentralized Pet Insurance (White-Label MVP)
+# 🐾 PetProtect — Web3 Pet Insurance Basic Edition (White-Label MVP)
 
 A lean, whitelabel micro-insurance dApp for dogs and cats.  
 Buy blockchain-based policies. No paperwork. No middlemen.  
