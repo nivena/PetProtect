@@ -122,15 +122,16 @@ Upgrade to a paid plan and unlock:
 
 ### 💼 Feature Comparison
 
-| Feature                    | Free Tier (Demo) | Plus Tier (Pro) | Premium Tier (Claims) |
-| -------------------------- | :--------------: | :-------------: | :-------------------: |
-| ✅ Buy Standard Plans      |        ✅        |       ✅        |          ✅           |
-| 🐶 Enter Pet Name          |        ✅        |       ✅        |          ✅           |
-| 🖼️ Upload Custom Pet Image |        ✅        |       ✅        |          ✅           |
-| ➕ Create Custom Plans     |        ❌        |       ✅        |          ✅           |
-| 📄 Submit Claims           |        ❌        |       ❌        |          ✅           |
+| Feature                    | Basic Tier (Free) | Plus Tier (Claims) | Premium Tier (DAO) |
+| -------------------------- | :---------------: | :-----------------: | :-----------------: |
+| ✅ Buy Standard Plans      |        ✅         |         ✅          |         ✅          |
+| 🐶 Enter Pet Name          |        ✅         |         ✅          |         ✅          |
+| 🖼️ Upload Custom Pet Image |        ✅         |         ✅          |         ✅          |
+| ➕ Create Custom Plans     |        ✅         |         ✅          |         ✅          |
+| 📄 Submit Claims           |        ❌         |         ✅          |         ✅          |
+| 🧠 DAO Governance          |        ❌         |         ❌          |         ✅          |
 
-> Want to unlock Plan Creation or Claims Submissions?  
+> Want to unlock Claims Submission or DAO Voting?  
 > Contact us at **[info@fractionalhq.com](mailto:info@fractionalhq.com)**  
 > or visit [fractionalhq.com](https://fractionalhq.com)
 
