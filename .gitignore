@@ -1,0 +1,64 @@
+# ---------------------
+# 🌱 Core
+node_modules
+.DS_Store
+
+# ---------------------
+# 🔐 Environment Files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*
+
+# ---------------------
+# 🛠 Build Outputs
+/.next
+/out
+/build
+/.pnp
+.pnp.*
+*.tsbuildinfo
+
+# ---------------------
+# 🧪 Test / Coverage
+/coverage
+/coverage.json
+
+# ---------------------
+# 🧾 Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ---------------------
+# 📦 Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# ---------------------
+# ⚡ Vercel
+.vercel
+
+# ---------------------
+# 🧬 TypeScript
+next-env.d.ts
+
+# ---------------------
+# 💼 Hardhat
+/cache
+/artifacts
+/typechain
+/typechain-types
+ignition/deployments/chain-31337
+
+# ---------------------
+# 🐍 Python (if used)
+venv/
+
+!.env.example

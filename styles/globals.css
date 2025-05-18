@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global CSS Variables (optional if not using) */
+:root {
+  --background: #272d32; /* PetProtect dark theme */
+  --foreground: #f4f4f4;
+}
+
+/* Optional dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* Leave body alone — use scoped styling on home page */
