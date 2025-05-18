@@ -1,15 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import { format } from "date-fns";
-import SubmitClaimForm from "@/components/policies/SubmitClaimForm";
 import { useMyPolicies } from "@/hooks/useMyPolicies"; // ✅
 
 export default function MyCoverage() {
-  const { policies, refreshPolicies } = useMyPolicies(); // ✅ load directly
-  const [selectedPolicyIndex, setSelectedPolicyIndex] = useState<number | null>(
-    null
-  );
+  const { policies } = useMyPolicies(); // ✅ load directly
 
   if (!policies || policies.length === 0) {
     return (
@@ -42,25 +37,9 @@ export default function MyCoverage() {
           <p className="text-sm text-gray-600">
             Claims Submitted: {policy.claimCount}
           </p>
-
-          {policy.active && (
-            <button
-              onClick={() =>
-                setSelectedPolicyIndex(selectedPolicyIndex === idx ? null : idx)
-              }
-              className="text-blue-600 underline text-sm mt-2"
-            >
-              {selectedPolicyIndex === idx ? "Cancel" : "Submit Claim"}
-            </button>
-          )}
-
-          {selectedPolicyIndex === idx && (
-            <SubmitClaimForm
-              policyId={idx}
-              onClose={() => setSelectedPolicyIndex(null)}
-              refresh={refreshPolicies} // ✅ Refresh after submission
-            />
-          )}
+          <p className="text-xs italic text-gray-400">
+            Submit Claim feature available in Plus
+          </p>
         </div>
       ))}
     </div>
